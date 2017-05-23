@@ -1,0 +1,31 @@
+{
+  "name": "starter-kit-phoenix-elm",
+  "version": "0.0.0",
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "mix deps.get",
+    "start": "mix phoenix.server",
+    "test:back": "mix test",
+    "test:back:watch": "mix test.watch",
+    "test:front": "cd web/elm; elm-test",
+    "test:front:watch": "cd web/elm; elm-test -w",
+    "test": "npm run test:front; npm run test:back",
+    "deploy": "brunch build --production",
+    "watch": "brunch watch --stdin"
+  },
+  "dependencies": {
+    "phoenix": "file:deps/phoenix",
+    "phoenix_html": "file:deps/phoenix_html"
+  },
+  "devDependencies": {
+    "babel-brunch": "~6.0.0",
+    "brunch": "2.7.4",
+    "clean-css-brunch": "~2.0.0",
+    "css-brunch": "~2.0.0",
+    "elm": "^0.18.0",
+    "elm-brunch": "^0.8.0",
+    "javascript-brunch": "~2.0.0",
+    "uglify-js-brunch": "~2.0.1"
+  }
+}
